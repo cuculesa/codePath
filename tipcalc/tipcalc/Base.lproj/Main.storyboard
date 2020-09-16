@@ -31,7 +31,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eVu-k2-aYU">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eVu-k2-aYU" userLabel="tipController">
                                 <rect key="frame" x="44" y="298" width="321" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
@@ -39,9 +39,12 @@
                                     <segment title="20%"/>
                                     <segment title="30%"/>
                                 </segments>
+                                <connections>
+                                    <action selector="calcTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="qeh-ds-PFb"/>
+                                </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FBu-ER-zrN">
-                                <rect key="frame" x="44" y="266" width="297" height="12"/>
+                                <rect key="frame" x="44" y="266" width="325" height="12"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -84,6 +87,7 @@
                     <navigationItem key="navigationItem" title="I like $" prompt="$ like me" id="VS5-lW-4Vu" userLabel="My baby"/>
                     <connections>
                         <outlet property="billField" destination="SgZ-9r-CMs" id="6jp-uz-oaj"/>
+                        <outlet property="tipControl" destination="eVu-k2-aYU" id="E3H-Mn-8lj"/>
                         <outlet property="tipLabel" destination="Rlf-Ql-0Xn" id="twI-5i-jV7"/>
                         <outlet property="totalLabel" destination="BER-P0-fHi" id="JxV-d2-mSM"/>
                     </connections>
