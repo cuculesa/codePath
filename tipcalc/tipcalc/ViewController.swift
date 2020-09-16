@@ -25,12 +25,16 @@ class ViewController: UIViewController {
     
     @IBAction func calcTip(_ sender: Any) {
         //get bill
+        let bill = Double(billField.text!) ?? 0
         
         //calc tip
+        let perc = [0.15, 0.2, 0.3]
+        let tip = bill * perc
+        let total = bill + tip
         
         //update labels
-        tipLabel.text = "100"
-        totalLabel.text = "10"
+        tipLabel.text = String(format:"$%.2f", tip)
+        totalLabel.text = String(format:"$%.2f", total)
     }
 }
 
